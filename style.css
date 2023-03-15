@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "aside content";
+    grid-template-rows: 8vh 86%;
+    grid-template-columns: 20% 1fr;
+    height: 100vh;
+}
+.header {
+    grid-area: header;
+}
+.aside {
+    grid-area: aside;
+}
+.content {
+    grid-area: content;
+}
+
+/* header */
+.header {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 8px rgba(153, 166, 191, 0.12);
+}
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.headerLeft {
+    display: flex;
+    align-items: center;
+}
+.headerLogoBlock {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 80px;
+}
+.headerLogoBlock span {
+    color:  #2C384F;
+    font-size: 20px;
+    font-weight: 600;
+}
+.menuIcon {
+    margin-right: 50px;
+}
+.headerSerchBlock {
+    position: relative;
+}
+.headerSerchBlock input{
+    background: #F5F7FA;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    width: 250px;
+}
+.headerSerchBlock img{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.asideEthereum {
+    background: #784FFE;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    margin: 30px 30px 15px 30px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.asideMenu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0 32px;
+}
+.asideMenu li {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+}
+.asideMenu li:first-child {
+    color: #784FFE;
+    background: rgba(120, 79, 254, 0.12);
+    border-radius: 8px;
+}
+.asideMenu li:last-child {
+    margin-top: 30px;
+}
+/* content */
+.content {
+    background-color: #E5E5E5;
+    padding: 20px;
+    height: 87vh;
+}
+.overviewBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.overviewBlock button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #724BF2;
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+.contentContainer {
+    display: grid;
+    grid-template-areas: 
+    "worth worth worth worth  income income income income expenses expenses expenses expenses"
+    "portfolio portfolio portfolio portfolio portfolio portfolio portfolio assets assets assets assets assets "
+    "transactions transactions transactions transactions transactions transactions transactions assets assets assets assets assets"
+     ;
+     gap: 30px;
+     height: 75vh;
+}
+.contentContainer > div {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 25px 30px 25px 30px;
+}
+.worth {
+    grid-area: worth;
+}
+.income {
+    grid-area: income;
+}
+.expenses {
+    grid-area: expenses;
+}
+.portfolio {
+    grid-area: portfolio;
+}
+.assets {
+    grid-area: assets;
+}
+.transactions {
+    grid-area: transactions;
+}
+.contentTitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #899BBE;
+}
+.worthCountContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 90%;
+    align-items: flex-start;
+}
+.worthCount {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 18px;
+}
+.worthCount div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.worthCount p {
+    color: #20BF6B;
+}
+.worthSend {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #724BF2;
+    border-radius: 12px;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    border: none;
+}
+.worthBuy {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #ECE6FF;
+    border-radius: 12px;
+    padding: 10px 20px;
+    border: none;
+}
+.greenText {
+    color: #20BF6B;
+}
+
+/* income */
+.incomeContainer {
+    display: flex;
+    gap: 10px;
+}
+.incomeContainer > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.expensesContainer {
+    display: flex;
+    gap: 10px;
+}
+.expensesContainer > div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.expensesContainer div p {
+    color: #EB3B5A;
+}
+.portfolio {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    gap: 15px;
+    grid-template-areas: 
+    "portfolioHeader portfolioHeader"
+    "portfolioPrice portfolioGraph"
+    ;
+}
+.portfolioHeader {
+    grid-area: portfolioHeader;
+    display: flex;
+    justify-content: space-between;
+
+}
+.portfolioHeader >div {
+   display: flex;
+   align-items: center;
+   gap: 10px; 
+}
+.portfolioHeader select {
+    background: #EFEBFF;
+    border-radius: 12px;
+    border: none;
+    padding: 5px;
+}
+.portfolioPrice {
+    grid-area: portfolioPrice;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #899BBE;
+}
+.portfolioPrice div {
+    position: relative;
+}
+.portfolioPrice div:after {
+    position: absolute;
+    padding-left: 20px;
+    bottom: 4px;
+    content: '.............................................................................................';
+    letter-spacing:  4px;
+    width: 100%;
+}
+
+.portfolioGraph {
+    position: absolute;
+    grid-area: portfolioGraph;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    z-index: 9999;
+    gap: 23px;
+    margin-top:  72px;
+    margin-left: 80px;
+}
+.portfolioGraph div {
+    background-color: #724BF2;
+    border-radius: 4px 4px 0px 0px ;
+    width: 50px;
+}
+.portfolioGraph div::after {
+    position: absolute; 
+    color: #899BBE;
+    bottom: -30px;
+    padding-left: 10px;
+}
+.jan {
+    height: 43px;
+}
+.jan::after {
+    content: 'Jan';
+}
+.feb {
+    height: 77px;
+}
+.feb::after {
+    content: 'Feb';
+}
+.mar {
+    height: 129px;
+}
+.mar::after {
+    content: 'Mar';
+    color: black!important;
+    font-weight: bold;
+}
+.apr {
+    height: 86px;
+}
+.apr::after {
+    content: 'Apr';
+}
+.may {
+    height: 43px;
+}
+.may::after {
+    content: 'May';
+}
+.jun {
+    height: 64px;
+}
+.jun::after {
+    content: 'Jun';
+}
+.jule {
+    height: 86px;
+}
+.jule::after {
+    content: 'Jule';
+}
+.aug  {
+    height: 113px;
+}
+.aug::after {
+    content: 'Aug';
+}
+.sep {
+    height: 104px;
+}
+.sep::after {
+    content: 'Sep';
+}
+.oct {
+    height: 57px;
+}
+.oct::after {
+    content: 'Oct';
+}
+
+/* assets */
+.assets .imgText {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.assets .imgText h3 {
+    padding-left: 15px;
+}
+.assets  .assetsIcons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.assets .assetsIcons .assetsMarket1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.assets .assetsIcons .monet {
+    padding-left: 15px;
+}
+.assets .assetsIcons .monet .grey {
+    color: #899BBE;
+}
+.assets .assetsIcons .red {
+    color: #EB3B5A;
+}
+.assets .assetsIcons .imgRed {
+    width: 14.33px;
+    height: 14.33px;
+}
+.assets  .assetsIcons span {
+    color: #20BF6B;
+}
+.assets .assetsMarket {
+    display: flex;
+}
+.assets .btn {
+    text-align: center;
+}
+.assets .line {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.assets .btn button{
+    background: #724BF2;
+    border-radius: 12px;
+    border: none;
+    color: #FFFFFF;
+    padding: 12px 120px;
+    cursor: pointer;
+}
+
+/* transactions */
+.transactions .portfolioHeader {
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+.transactions .footerBlockOne {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.transactions .williamBlock {
+    background: rgba(99, 52, 254, 0.12);
+    border-radius: 6px;
+    color: #724BF2;
+    padding: 7px 17px;
+}
+.transactions .footerLine {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 1.2px;
+}
